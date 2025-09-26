@@ -1,0 +1,369 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0909;
+  color: #f5f5f5;
+  transition: background 0.5s ease;
+}
+
+.story-container {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+  padding-right: 6rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  align-items: center;
+  justify-content: center;
+}
+
+.story {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.story img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(45deg, #f09433, #793fb7, #f37e92, #cc2366, #bc1888);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.story p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #f5f5f5;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #050505;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  border-right: 1px solid #545151;
+  z-index: 1000;
+  gap: 1.5rem;
+  padding-right: 4rem;
+}
+.navbar img{
+  width: 35px;
+  height: 40px;
+  border-radius: 50%;
+  padding:3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.logo img {
+  width: 120px;
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #f9f8f8;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content-area {
+  flex: 1;
+  padding: 1rem;
+}
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 200px;   /* space for left navbar */
+  margin-right: 200px;  /* space for right navbar */
+}
+.right-navbar {
+  width: 12px;
+  height: 2px;
+  background-color:#0a0909;
+  border-left: 1px solid #0a0909;
+  padding-left: 4rem 1rem;
+  position: fixed;
+  top: 0;
+  right: 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 25rem;
+}
+.right-navbar ul {
+  list-style: none;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+}
+.right-navbar li {
+  margin-bottom: 1.2rem;
+}
+.right-navbar a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+.user-header h3{
+  color:#f9f6f6 ;
+}
+.right-navbar a:hover {
+  color: #f0f2f3;
+}
+.suggestion-info-group img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding:3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.profile-suggestions h3{
+  padding-top: 1rem;
+}
+.profile-suggestions {
+  width: 350px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background: #070707;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(13, 98, 141, 0.1);
+  padding: 20px;
+  justify-content: space-between;
+  padding-bottom: 4px;
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.user-header img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.suggestions-list .suggestion{
+  justify-content: space-between;
+  align-items: center;
+   flex-direction: column;
+   display: flex;
+   padding: auto;
+}
+.suggestion img {
+  width: 10px;
+  border-radius: 50%;
+}
+.suggestion p {
+  font-size: 0.8em;
+  color: rgba(244, 240, 240, 0.641);
+}
+.suggestion-item button{
+  color: rgb(5, 180, 249);
+}
+
+button {
+  position: fixed;
+  margin-left: 14rem;
+  background-color: black;
+  color: rgb(6, 159, 236);
+  border: blue;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.75em;
+  text-align: center;
+  color: rgb(254, 252, 252);
+}
+@media (max-width: 768px) {
+  .navbar {
+    width: 160px;
+  }
+
+  .main-content {
+    margin-left: 160px;
+  }
+
+  .story img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .story p {
+    font-size: 12px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+.feed-column-wrapper {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers feed content horizontally */
+}
+
+/* Individual post container */
+.feed {
+  padding-left: 12rem;
+    max-width:700px;
+    width: 200%;
+    margin-bottom: 2rem;
+}
+/* ===================================== */
+.post-header{
+    display:flex;
+    align-items: center;
+    padding: 1rem;
+}
+.post-header img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding:3px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #7a565c, #cc2366, #bc1888);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    margin-right: 10px;
+}
+.post-header p { 
+    margin: 0;
+    font-weight: 600;
+}
+
+.post-content{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.post-content img{
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.post-actions{
+    padding: 0.5rem 1rem;
+    display:flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.left-actions{
+    display: flex;
+    gap: 15px;
+}
+
+.post-actions i {
+    cursor: pointer;
+    transition: color 0.1s;
+}
+
+.post-caption{
+    padding: 0 1rem 1rem 1rem;
+}
+/* Container for the FAB */
+.message-fab-container {
+    /* Use fixed to keep it in place while scrolling */
+    position: fixed;
+    /* Position it near the bottom-right */
+    bottom: 20px;
+    right: 20px;
+    /* Styling to match the image's pill shape */
+    background-color: #212121; /* Dark background */
+    color: white;
+    padding: 10px 20px 10px 15px;
+    border-radius: 50px; /* Makes it pill-shaped */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Make sure it's above other content */
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Styling the Message Icon and Badge */
+.message-button {
+    position: relative; /* Crucial for positioning the badge */
+    margin-right: 10px;
+    height: auto;
+    width: 50px;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%; /* Makes it a circle */
+    line-height: 1; /* For better vertical alignment */
+}
+
+/* Styling the Profile Picture */
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
